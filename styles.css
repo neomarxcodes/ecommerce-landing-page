@@ -154,3 +154,55 @@ a {
   font-size: 22px;
   font-weight: 600;
 }
+
+/* Banner */
+
+.banner {
+  display: flex;
+  background-color: #e9e9e9;
+  height: 400px;
+}
+
+.banner__text, .banner__image {
+  width: 50%;
+}
+
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 120px;
+}
+
+.banner__text__title {
+  font-size: 32px;
+}
+
+.banner__text__paragraph {
+  font-size: 18px;
+}
+
+.banner__text__button {
+  background-color: #000;
+  color: white;
+  border: 2px solid transparent;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+  transition: 200ms ease;
+}
+
+.banner__text__button:hover {
+  border-color: #000;
+  background-color: transparent;
+  color: #000;
+}
+
+.banner__image {
+  height: 100%;
+  object-fit: cover;
+}
