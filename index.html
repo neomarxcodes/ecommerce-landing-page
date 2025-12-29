@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/fc0b80239e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
     <title>eCommerce App</title>
   </head>
   <body>
@@ -21,6 +22,20 @@
             <i class="fa-solid fa-basket-shopping nav__link__icon"></i>
           </a>
         </div>
+        <button class="nav__menu" onclick="openMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="menu">
+      <button class="menu__close" onclick="closeMenu()">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <div class="menu__links">
+        <a href="#" class="menu__link" onclick="closeMenu()"> Home </a>
+        <a href="#" class="menu__link" onclick="closeMenu()"> Products </a>
+        <a href="#" class="menu__link" onclick="closeMenu()"> Cart </a>
       </div>
     </nav>
 
@@ -190,7 +205,7 @@
       </section>
 
       <!-- Trending -->
-       <section id="trending-products">
+      <section id="trending-products">
         <div class="container">
           <div class="row products__row">
             <h2 class="products__title">Trending Now</h2>
@@ -244,15 +259,17 @@
         </div>
 
         <!-- Banner 2 -->
-       </section>
+      </section>
 
-       <!-- Banner 2 -->
-       <section id="banner-2">
+      <!-- Banner 2 -->
+      <section id="banner-2">
         <div class="container">
           <div class="row">
             <div class="banner banner-2">
               <div class="banner__text">
-                <h2 class="banner__text__title">Comfortable & Elegant living</h2>
+                <h2 class="banner__text__title">
+                  Comfortable & Elegant living
+                </h2>
                 <p class="banner__text__paragraph">
                   RAOUF Products are all made to standard sizes so that you can
                   mix and match them freely.
@@ -266,6 +283,36 @@
       </section>
 
       <!-- Newsletter -->
+      <section id="newsletter">
+        <div class="container">
+          <div class="row newsletter__row">
+            <h2 class="newsletter__title">Newsletter</h2>
+            <form action="#" class="newsletter__form">
+              <input
+                type="text"
+                class="newsletter__form__input"
+                placeholder="Enter email address"
+              />
+              <button class="newsletter__form__subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer__container">
+        <div class="footer__links">
+          <a href="#" class="footer__link">About</a>
+          <a href="#" class="footer__link">Store Locator</a>
+          <a href="#" class="footer__link">FAQs</a>
+          <a href="#" class="footer__link">News</a>
+          <a href="#" class="footer__link">Careers</a>
+          <a href="#" class="footer__link">Contact Us</a>
+        </div>
+        <span class="footer__credit">Designed by Abderraouf Rahmani</span>
+      </div>
+    </footer>
   </body>
 </html>
