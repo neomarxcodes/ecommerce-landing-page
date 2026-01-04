@@ -17,18 +17,10 @@ async function renderProducts() {
   productsList.innerHTML = `<i class="fa-solid fa-spinner products__list__spinner"></i>`;
   let products = await fetchProducts();
 
-  if (productsFilter === "Furniture") {
-    products = products.filter((product) => product.category === "Furniture");
-  } else if (productsFilter === "Electronics") {
-    products = products.filter((product) => product.category === "Electronics");
-  } else if (productsFilter === "Lamps") {
-    products = products.filter((product) => product.category === "Lamps");
-  } else if (productsFilter === "Kitchen") {
-    products = products.filter((product) => product.category === "Kitchen");
-  } else if (productsFilter === "Chairs") {
-    products = products.filter((product) => product.category === "Chairs");
-  } else if (productsFilter === "Skin Care") {
-    products = products.filter((product) => product.category === "Skin Care");
+  if (productsFilter) {
+    products = products.filter(
+      (product) => product.category === productsFilter
+    );
   }
 
   const productsHTML = products
