@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   padding: 80px 0;
 }
@@ -22,6 +26,10 @@ a {
   max-width: 1280px;
   padding: 0 12px;
   margin: 0 auto;
+}
+
+.color-primary {
+  color: #d81414;
 }
 
 /* Navigation Bar Styles */
@@ -214,7 +222,8 @@ a {
   height: 400px;
 }
 
-.banner__text, .banner__image {
+.banner__text,
+.banner__image {
   width: 50%;
 }
 
@@ -329,6 +338,61 @@ footer {
   font-size: 18px;
 }
 
+/* Products Page */
+
+.all-products__row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.products__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products__header__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.products__header__link__text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.products__header__title {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.products__header__filter {
+  padding: 4px;
+  background-color: #f4f4f4;
+  font-size: 15px;
+  font-weight: 500;
+  color: #292929;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.products__list__spinner {
+  font-size: 40px;
+  margin: 0 auto;
+  animation: loading-spinner 1000ms infinite;
+}
+
+@keyframes loading-spinner {
+  0%{
+    rotate: 0deg;
+  }100% {
+    rotate: 360deg;
+  }
+}
+
 /* LG Screens - Laptops */
 @media (max-width: 1024px) {
   .product__details__title {
@@ -352,7 +416,6 @@ footer {
 
   .banner__image {
     display: none;
-
   }
 }
 
@@ -376,7 +439,7 @@ footer {
   }
 
   .product {
-    width: 48%
+    width: 48%;
   }
 }
 
@@ -397,5 +460,10 @@ footer {
 
   .newsletter__form__input {
     text-align: center;
+  }
+
+  .products__header {
+    flex-direction: column;
+    gap: 16px;
   }
 }
